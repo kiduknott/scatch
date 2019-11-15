@@ -8,16 +8,9 @@ namespace Scratch
     {
         public When And { get; set; }
 
-        public void IExecuteTheApplication() { }
-
-        public When ICall()
+        public ApplicationCallStep ICall()
         {
-            return this;
-        }
-
-        public IAnd<When> ExecuteTheApplication()
-        {
-            return this;
+            return new ApplicationCallStep();
         }
     }
 }
