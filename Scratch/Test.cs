@@ -14,7 +14,7 @@ namespace Scratch
         public void ScratchTest()
         {
             Given.IHaveSetUpTheInitialConditions().And.TheApplicationIsReadyToRun();
-            When.ICall().ExecuteTheApplication();
+            When.ICall().ExecuteTheApplication().And.DoNothingElse();
             Then.TheApplicationBehavedAsExpected().And.TheApplicationShutDownGracefully();
         }
     }

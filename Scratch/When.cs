@@ -12,5 +12,10 @@ namespace Scratch
         {
             return new ApplicationCallStep<When>();
         }
+
+        public IAnd<When> DoNothingElse()
+        {
+            return this;
+        }
     }
 }
