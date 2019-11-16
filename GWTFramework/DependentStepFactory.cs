@@ -8,7 +8,8 @@ namespace GWTFramework
 
         public T2 Build<T2>() where T2 : IAnd<T>, new()
         {
-            return new T2() { And = this.And };
+            var step = new T2() { And = this.And };
+            return step;
         }
     }
 }
