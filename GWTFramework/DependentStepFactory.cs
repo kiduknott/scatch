@@ -2,9 +2,9 @@
 
 namespace GWTFramework
 {
-    public class DependentStepFactory<T> : IAnd<T> //where T : new()
+    public class DependentStepFactory<T> : IAnd<T>
     {
-        private T _caller;
+        private readonly T _caller;
 
         public DependentStepFactory(T caller)
         {
