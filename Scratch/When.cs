@@ -4,7 +4,7 @@ namespace Scratch
 {
     internal class When : IAnd<When>
     {
-        public When()
+        internal When()
         {
             And = this;
         }
@@ -13,7 +13,7 @@ namespace Scratch
 
         public ApplicationCallStep<When> ICall()
         {
-            return new DependentStepFactory<When>().Build<ApplicationCallStep<When>>();
+            return new DependentStepFactory<When>(this).Build<ApplicationCallStep<When>>();
         }
 
         public IAnd<When> DoNothingElse()
