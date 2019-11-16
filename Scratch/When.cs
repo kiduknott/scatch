@@ -1,16 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using GWTFramework;
 
 namespace Scratch
 {
     internal class When : IAnd<When>
     {
+        internal When()
+        {
+            And = this;
+        }
+
         public When And { get; set; }
 
         public ApplicationCallStep<When> ICall()
         {
-            return DependentStepFactory<ApplicationCallStep<When>>();
+            return new DependentStepFactory<When>().Build<ApplicationCallStep<When>>();
         }
 
         public IAnd<When> DoNothingElse()
@@ -18,7 +21,7 @@ namespace Scratch
             return this;
         }
 
-        public T DependentStepFactory<T>() where T : IAnd<When>, new()
+        public T DependentStepFactory2<T>() where T : IAnd<When>, new()
         {
             return new T() { And = this.And };
         }

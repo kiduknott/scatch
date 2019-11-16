@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scratch", "Scratch\Scratch.csproj", "{596DC950-6F1E-4177-B448-C0192535E8E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scratch", "Scratch\Scratch.csproj", "{596DC950-6F1E-4177-B448-C0192535E8E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GWTFramework", "GWTFramework\GWTFramework.csproj", "{03B71F00-74B1-458D-8EFA-58CCD69B78ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{596DC950-6F1E-4177-B448-C0192535E8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{596DC950-6F1E-4177-B448-C0192535E8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{596DC950-6F1E-4177-B448-C0192535E8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B71F00-74B1-458D-8EFA-58CCD69B78ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B71F00-74B1-458D-8EFA-58CCD69B78ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B71F00-74B1-458D-8EFA-58CCD69B78ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B71F00-74B1-458D-8EFA-58CCD69B78ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

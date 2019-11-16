@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using GWTFramework;
 
 namespace Scratch
 {
     internal class Given : IAnd<Given>
     {
+        internal Given()
+        {
+            And = this;
+        }
+
         public Given And { get; set; }
 
         public IAnd<Given> IHaveSetUpTheInitialConditions()

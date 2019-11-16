@@ -13,6 +13,7 @@ namespace Scratch
         [Test]
         public void ScratchTest()
         {
+            Given.IHaveSetUpTheInitialConditions();
             Given.IHaveSetUpTheInitialConditions().And.TheApplicationIsReadyToRun();
             When.ICall().ExecuteTheApplication().And.DoNothingElse();
             Then.TheApplicationBehavedAsExpected().And.TheApplicationShutDownGracefully();
