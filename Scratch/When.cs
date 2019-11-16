@@ -10,12 +10,17 @@ namespace Scratch
 
         public ApplicationCallStep<When> ICall()
         {
-            return new ApplicationCallStep<When>();
+            return DependentStepFactory<ApplicationCallStep<When>>();
         }
 
         public IAnd<When> DoNothingElse()
         {
             return this;
+        }
+
+        public T DependentStepFactory<T>() where T : IAnd<When>, new()
+        {
+            return new T() { And = this.And };
         }
     }
 }
