@@ -2,14 +2,14 @@
 
 namespace GWTFramework
 {
-    public class DependentStepFactory<T> : IAnd<T>
+    public class DependentStepFactory<T> : IAnd<T> where T : new()
     {
         public T And { get; set; }
 
         public T2 Build<T2>() where T2 : IAnd<T>, new()
         {
-            var step = new T2() { And = this.And };
-            return step;
+            var stepRoot = new T(); //Hack - not the original Given, When, Then instance
+            return new T2 { And = stepRoot };
         }
     }
 }
